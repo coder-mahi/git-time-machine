@@ -151,7 +151,7 @@ function processGitTree(tree) {
           };
           current.children.push(dir);
         }
-        
+      
         current = dir;
       }
     }

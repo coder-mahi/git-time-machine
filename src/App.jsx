@@ -45,15 +45,17 @@ const RepoVisualizer = () => {
   const [selectedFile, setSelectedFile] = useState(null);
 
   useEffect(() => {
-    const loadRepoData = async () => {
+    const loadRepoData = async() => {
       try {
         setLoading(true);
         const data = await fetchRepoData(owner, repo);
         setRepoData(data);
-        if (data.commits.length > 0) {
+        if (data.commits.length>0)
+          {
           setSelectedCommit(data.commits[0]);
         }
-      } catch (err) {
+      } 
+      catch (err) {
         setError(err.message);
       } finally {
         setLoading(false);

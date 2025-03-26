@@ -47,19 +47,20 @@
 
 
 import axios from 'axios';
-
 export const fetchRepoData = async (owner, repo) => {
   try {
     const response = await axios.get(`/api/repos/${owner}/${repo}`);
     return response.data;
-  } catch (error) {
+  } 
+  catch(error) {
     console.error('Error fetching repo data:', error);
     throw new Error('Failed to fetch repository data');
   }
 };
 
 export const fetchFileContent = async (owner, repo, sha, path) => {
-  try {
+  try 
+  {
     const response = await axios.get(`/api/repos/${owner}/${repo}/content/${sha}/${path}`);
     return response.data;
   } catch (error) {

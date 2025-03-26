@@ -1,16 +1,15 @@
 import React from 'react';
 import { UserIcon, CalendarIcon, CodeIcon, ArrowCircleRightIcon } from '@heroicons/react/outline';
 
-const CommitDetail = ({ commit }) => {
-  if (!commit) return null;
-
-  return (
+const CommitDetail=({ commit}) =>{
+  if(!commit) return null;
+  return(
     <div className="bg-gray-800 rounded-lg shadow-lg p-4 mb-6">
       <h2 className="text-xl font-semibold mb-4 text-gray-200 border-b border-gray-700 pb-2">
-        Commit Details
+        Commit Detailss
       </h2>
       <div className="space-y-4">
-        <div>
+      <div>
           <h3 className="text-lg font-medium text-white mb-2">{commit.message.split('\n')[0]}</h3>
           {commit.message.split('\n').length > 1 && (
             <p className="text-sm text-gray-300 whitespace-pre-line mt-2">
