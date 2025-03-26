@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-futuristic-dark text-futuristic-light;
+}
+
+.gradient-bg {
+  background: linear-gradient(-45deg, #0a0e17, #1a1a2e, #16213e, #0a0e17);
+  background-size: 400% 400%;
+  animation: gradient-x 15s ease infinite;
+}
+
+.commit-card {
+  @apply glass-effect rounded-xl p-6 transition-all hover:shadow-lg hover:shadow-futuristic-primary/20;
+}
+
+.timeline-line {
+  @apply absolute left-8 h-full w-1 bg-gradient-to-b from-futuristic-primary to-futuristic-accent;
+}
